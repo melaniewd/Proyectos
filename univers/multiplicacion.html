@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/images/ballena.png" type="image/x-icon">
+<title>Tabla de Multiplicar</title>
+</head>
+<style>
+       button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4c82af;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #344c9b;
+    }
+</style>
+<body>
+    <h1>Tabla de Multiplicar</h1>
+    <p>Introduce un número para generar su tabla de multiplicar del 1 al 10:</p>
+    <input type="number" id="numeroInput">
+    <button onclick="generarTabla()">Generar Tabla</button>
+    <a href="PERIODO2.html"> <button>Regresar</button></a>
+    <div id="tablaMultiplicar"></div>
+
+    <script>
+        function generarTabla() {
+            let numero = parseInt(document.getElementById('numeroInput').value);
+            let tablaHTML = '<h2>Tabla de Multiplicar del ' + numero + '</h2>';
+            tablaHTML += '<table border="1">';
+            tablaHTML += '<tr><th>Número</th><th>Resultado</th></tr>';
+            for (let i = 1; i <= 10; i++) {
+                let resultado = numero * i;
+                tablaHTML += `<tr><td>${numero} x ${i}</td><td>${resultado}</td></tr>`;
+            }
+            tablaHTML += '</table>';
+            document.getElementById('tablaMultiplicar').innerHTML = tablaHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/ballena.png" type="image/x-icon">
+    <title>PREGUNTAS</title>
+    <style>
+
+       header {
+        background-color: rgb(0, 0, 0);
+        color: rgb(241, 225, 232);
+        padding: 10px;
+      }
+
+
+      button {
+        background-color: rgb(180, 21, 140);
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      button:hover {
+        background-color: #9e2f8c;
+      }
+       
+        .container {
+            perspective: 200px;
+            width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .button-container {
+            position: relative;
+            margin-bottom: 10px; 
+        }
+        .cube-button {
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            position: relative;
+            background-color: #b1a6cf;
+            display: block; 
+            width: 100%;
+            text-align: left;
+        }
+        .additional-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            color: rgb(255, 255, 255);
+            background-color: rgba(38, 22, 48, 0.9);
+            padding: 10px;
+            transform-style: preserve-3d;
+            transform: rotateX(-90deg);
+            transition: transform 0.5s;
+            width: 100%; 
+            box-sizing: border-box; 
+            z-index: 1; 
+        }
+        .additional-content.show {
+            display: block;
+            transform: rotateX(0deg);
+            max-height: 500px; 
+            overflow: auto;
+        }
+        .background-image {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> CONSULTA</h1>
+        <main>
+            <button> <a href="preguntas (2).html">VOLVER</a></button>
+       
+        </main>
+ 
+      </header>
+      <br>
+<br>
+    
+    <div class="container">
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(0)">1. ¿Qué es un recurso frontend y cuál es su función en el
+                desarrollo web?</button>
+            <div class="additional-content">
+                <p>Un recurso frontend es cualquier tecnología, herramienta o archivo
+                    utilizado en el desarrollo de la interfaz de usuario de un sitio web o
+                    aplicación web. Su función principal es crear una experiencia de
+                    usuario atractiva, interactiva y funcional en el navegador web.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(1)">2. Principales tecnologias o herramientas utilizadas en el
+                desarrollo Frontend y por que son importantes</button>
+            <div class="additional-content">
+                <p>Algunas Principales tecnologias o herramientas utilizadas en el
+                    desarrollo de Frontend son HTML, CSS Y JavaScript. HTML se utiliza
+                    para estructural el contenido de una pagina web, CSS se utiliza para
+                    estilizar y diseñar la apariencia de la pagina y JavaScript se utiliza
+                    para agregar interactividad y funcionalidad dinamica Estas tecnologías
+                    son importantes porque permiten a los desarrolladores crear interfaces
+                    de usuario atractivas y funcionales que mejoran la experiencia del
+                    usuario y hacen que el sitio web o la aplicación sean más fáciles de
+                    usar y navegar.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(2)">3. Responsividad en el diseño web y dos técnicas para lograrlo</button>
+            <div class="additional-content">
+                <p>La responsividad en el diseño web se refiere a la capacidad de un
+                    sitio web para adaptarse y mostrarse correctamente en una variedad de
+                    dispositivos y tamaños de pantalla. Dos técnicas para lograr la
+                    responsividad son:</p>
+                    <li>
+                        Media queries: Permiten aplicar estilos diferentes según las
+                        características del dispositivo, como el ancho de la pantalla.
+                      </li>
+                      <li>
+                        Diseño fluido: Utilizar unidades relativas como porcentajes en lugar
+                        de unidades fijas como píxeles para que los elementos se ajusten
+                        dinámicamente al tamaño de la pantalla.
+                      </li>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(3)">4. Diferencia entre HTML, CSS y JavaScript en el contexto del
+                desarrollo frontend y su papel</button>
+            <div class="additional-content">
+                <li>
+                    HTML (Lenguaje de Marcado de Hipertexto): Se utiliza para estructurar
+                    y organizar el contenido de una página web.
+                  </li>
+                  <li>
+                    CSS (Hojas de Estilo en Cascada): Se utiliza para estilizar y diseñar
+                    la apariencia visual de una página web.
+                  </li>
+                  <li>
+                    JavaScript: Se utiliza para agregar interactividad y funcionalidad
+                    dinámica a una página web.
+                  </li>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(4)">5. Importancia de la accesibilidad en el diseño frontend y dos
+                prácticas para mejorarla</button>
+            <div class="additional-content">
+                <p>La accesibilidad en el diseño frontend es crucial para garantizar que
+                    todas las personas, incluidas aquellas con discapacidades, puedan
+                    acceder y utilizar un sitio web o aplicación. Dos prácticas para
+                    mejorar la accesibilidad son:</p>
+                    <li>
+                        Uso de etiquetas semánticas HTML: Ayuda a los lectores de pantalla a
+                        comprender la estructura y el contenido de la página.
+                      </li>
+              
+                      <li>
+                        Contraste adecuado: Asegurarse de que haya suficiente contraste entre
+                        el texto y el fondo para facilitar la lectura para personas con
+                        discapacidades visuales.
+                      </li>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(5)">6. Concepto de frameworks frontend y ejemplos</button>
+            <div class="additional-content">
+                <p>Los frameworks frontend son conjuntos de herramientas y bibliotecas
+                    predefinidas que proporcionan una estructura y funcionalidades comunes
+                    para el desarrollo frontend. Dos ejemplos son:</p>
+                    <li>
+                        React.js: Un framework de JavaScript desarrollado por Facebook para la
+                        creación de interfaces de usuario interactivas.
+                      </li>
+                      <li>
+                        Angular: Un framework de JavaScript desarrollado por Google para la
+                        creación de aplicaciones web de una sola página (SPA).
+                      </li>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(6)">7. Diferencia entre un CMS y un framework en el desarrollo frontend
+                y ejemplos</button>
+            <div class="additional-content">
+                <p>La principal diferencia radica en que los CMS están orientados al
+                    contenido y ofrecen funcionalidades específicas para la gestión de
+                    este, mientras que los frameworks frontend se centran en proporcionar
+                    herramientas para el desarrollo de la interfaz de usuario y la lógica
+                    de la aplicación.</p>
+                    <li>
+                        CMS (Sistema de Gestión de Contenidos): Proporciona una interfaz de
+                        administración para crear, editar y gestionar contenido web. Ejemplos:
+                        WordPress, Drupal.
+                      </li>
+                      <li>
+                        Framework: Proporciona una estructura y funcionalidades comunes para
+                        el desarrollo frontend, pero no incluye una interfaz de
+                        administración. Ejemplos: React.js, Angular
+                      </li>
+            </div>
+          
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(7)">8. ¿Qué es un array en PHP?</button>
+            <div class="additional-content">
+                <p>Un array en PHP es una estructura de datos que puede contener múltiples valores, cada uno identificado por una clave única. Los arrays en PHP pueden ser de dos tipos: indexados y asociativos.</p>
+                <li>a. Indexado:</li>
+                <img src="assets/images/fresa.png" alt="Image 1" class="image">
+                <li>b. Asociativo:</li>
+                <img src = "assets/images/banana.png" alt="image 1 " class="image">
+                <li>c. Utilizando la sintaxis de corchetes (PHP 5.4+):</li>
+                <img src ="assets/images/fruta.png" alt="image 1" class="image">
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(8)">9. Operaciones comunes con arrays en PHP incluyen:</button>
+            <div class="additional-content">
+                <li>Acceder a elementos individuales usando sus claves o índices.</li>
+                 <li> Agregar elementos al final del array con array_push() o utilizando la notación de corchetes.</li>
+                  <li> Eliminar elementos con unset() o array_pop().</li> 
+                  <li> Recorrer el array con bucles foreach, for, o while.</li>
+                  <li> Ordenar el array con funciones como sort() o asort().</li>
+                   <li> Obtener información sobre el array con funciones como count() o array_key_exists().</li>
+              
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(9)">Ejemplos prácticos 1 :</button>
+            <div class="additional-content">
+                <li> Calcular el promedio de calificaciones almacenadas en un array.</li>
+                <img src="assets/images/EJEMPLO1.png" alt="image 1" class="image">
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="cube-button" onclick="toggleContent(10)">Ejemplos prácticos 2 :</button>
+            <div class="additional-content">
+               <li> Filtrar nombres de estudiantes que comienzan con una letra específica.</li>
+               <img src="assets/images/EJEMPLO2.png" alt="image 1" class="image">
+            </div>
+        </div>
+    </div>
+    
+    <img src="assets/images/HELLOKITTY.png" alt="Background Image" class="background-image">
+    
+    <script>
+        var contents = document.querySelectorAll(".additional-content");
+
+        function toggleContent(index) {
+            for (var i = 0; i < contents.length; i++) {
+                if (i !== index) {
+                    contents[i].classList.remove("show");
+                }
+            }
+            contents[index].classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
+
+
+

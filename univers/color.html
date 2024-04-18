@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/images/ballena.png" type="image/x-icon">
+<title>Color Favorito</title>
+</head>
+<style>
+       button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4c82af;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #344c9b;
+    }
+</style>
+<body>
+    <h1>Color Favorito</h1>
+    <p>Introduce tu color favorito.</p>
+
+    <input type="text" id="colorInput">
+    <button onclick="verificarColor()">Aceptar</button>
+    <a href="PERIODO2.html"><button>Regresar</button></a>
+    <script>
+        function verificarColor() {
+            let color = document.getElementById('colorInput').value.toLowerCase(); // Convertimos a minúsculas para evitar problemas de capitalización
+            
+            if (color === 'rojo') {
+                alert('Finalizado. Has elegido el color rojo.');
+            } else {
+                alert(`Tu color favorito es: ${color}`);
+                // Limpiar el campo de entrada
+                document.getElementById('colorInput').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
